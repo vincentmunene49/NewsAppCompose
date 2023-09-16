@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -26,42 +27,18 @@ import com.loc.newsapp.ui.theme.on_boarding
 
 @Composable
 fun OnBoardingPage(
-    modifier: Modifier = Modifier,
-    page: Page
+    onClick: () -> Unit
+
 ) {
-    val padding = LocalPadding.current
-    val dimensions = LocalDimensions.current
-    Box(modifier = modifier.fillMaxSize()) {
-        Image(
-            modifier = modifier.fillMaxHeight(),
-            painter = painterResource(id = R.drawable.la),
-            contentDescription = "Premier league image",
-            contentScale = ContentScale.Fit
-        )
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .align(Alignment.BottomCenter)
-                .background(color = on_boarding)
-        ) {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(
-                        top = padding.extraLarge,
-                        start = padding.large,
-                        end = padding.large
-                    ),
-                verticalArrangement = Arrangement.spacedBy(dimensions.medium)
-            ) {
+    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+        Button(onClick = { onClick() }) {
 
-                Text(text = "Hello There on boarding")
-                Text(text = "Hello There on boarding")
-
-            }
+            Text(text = "Get Started")
 
         }
     }
+
+
 }
 
 @Preview
@@ -69,11 +46,7 @@ fun OnBoardingPage(
 fun PreviewOnboardingComponent() {
 
     NewsAppTheme {
-        OnBoardingPage(page = Page(
-            "",
-            "",
-            R.drawable.prem
-        ))
+
     }
 
 }
