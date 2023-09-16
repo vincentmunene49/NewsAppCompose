@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.loc.newsapp.ft_onboarding.presentation.component.OnBoardingPage
 import com.loc.newsapp.ui.theme.NewsAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,6 +20,9 @@ class MainActivity : ComponentActivity() {
         installSplashScreen()
         setContent {
             NewsAppTheme {
+                OnBoardingPage {
+
+                }
 
             }
         }
