@@ -21,71 +21,21 @@ import com.loc.newsapp.ui.LocalDimensions
 import com.loc.newsapp.ui.LocalPadding
 import com.loc.newsapp.ui.Padding
 
-private val LightColorScheme = lightColorScheme(
-    primary = primary,
-    onPrimary = onPrimary,
-    primaryContainer = primaryContainer,
-    onPrimaryContainer = onPrimaryContainer,
-    secondary = secondary,
-    onSecondary = onSecondary,
-    secondaryContainer = secondaryContainer,
-    onSecondaryContainer = onSecondaryContainer,
-    tertiary = tertiary,
-    onTertiary = onTertiary,
-    tertiaryContainer = tertiaryContainer,
-    onTertiaryContainer = onTertiaryContainer,
-    error = error,
-    errorContainer = errorContainer,
-    onError = onError,
-    onErrorContainer = onErrorContainer,
-    background = background,
-    onBackground = onBackground,
-    surface = surface,
-    onSurface = onSurface,
-    surfaceVariant = surfaceVariant,
-    onSurfaceVariant = onSurfaceVariant,
-    outline = outline,
-    inverseOnSurface = inverseOnSurface,
-    inverseSurface = inverseSurface,
-    inversePrimary = inversePrimary,
-    surfaceTint = surfaceTint,
-    outlineVariant = outlineVariant,
-    scrim = scrim,
-)
-
-
 private val DarkColorScheme = darkColorScheme(
-    primary = dark_primary,
-    onPrimary = dark_onPrimary,
-    primaryContainer = dark_primaryContainer,
-    onPrimaryContainer = dark_onPrimaryContainer,
-    secondary = dark_secondary,
-    onSecondary = dark_onSecondary,
-    secondaryContainer = dark_secondaryContainer,
-    onSecondaryContainer = dark_onSecondaryContainer,
-    tertiary = dark_tertiary,
-    onTertiary = dark_onTertiary,
-    tertiaryContainer = dark_tertiaryContainer,
-    onTertiaryContainer = dark_onTertiaryContainer,
-    error = dark_error,
-    errorContainer = dark_errorContainer,
-    onError = dark_onError,
-    onErrorContainer = dark_onErrorContainer,
-    background = dark_background,
-    onBackground = dark_onBackground,
-    surface = dark_surface,
-    onSurface = dark_onSurface,
-    surfaceVariant = dark_surfaceVariant,
-    onSurfaceVariant = dark_onSurfaceVariant,
-    outline = dark_outline,
-    inverseOnSurface = dark_inverseOnSurface,
-    inverseSurface = dark_inverseSurface,
-    inversePrimary = dark_inversePrimary,
-    surfaceTint = dark_surfaceTint,
-    outlineVariant = dark_outlineVariant,
-    scrim = dark_scrim,
+    primary = Blue,
+    onPrimary = White,
+    background = Black,
+    error = DarkRed,
+    surface = LightBlack
 )
 
+private val LightColorScheme = lightColorScheme(
+    primary = Blue,
+    onPrimary = White,
+    background = Color.White,
+    error = LightRed,
+    surface = Color.White
+)
 @Composable
 fun NewsAppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
