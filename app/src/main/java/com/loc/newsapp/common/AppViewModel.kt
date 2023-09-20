@@ -21,19 +21,20 @@ class AppViewModel @Inject constructor(
     var startingDestination by mutableStateOf(Routes.AppStartNavigation.route)
         private set
 
-    var splashCondition by mutableStateOf(false)
+    var splashCondition by mutableStateOf(true)
         private set
 
     init {
         onBoardingStatus.readOnBoardingStatus().onEach {
-
-            startingDestination = if (it) {
-                Routes.NewsNavigator.route
-            } else {
+            startingDestination = if(it){
+                Routes.NewsNavigation.route
+            }else{
                 Routes.AppStartNavigation.route
             }
+
             delay(300)
             splashCondition = false
+
         }.launchIn(viewModelScope)
     }
 }

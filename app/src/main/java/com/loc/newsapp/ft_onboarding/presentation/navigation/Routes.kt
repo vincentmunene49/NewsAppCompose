@@ -6,11 +6,11 @@ sealed class Routes(val route:String)
     object HomeScreen:Routes("homeScreen")
     object SearchScreen:Routes("searchScreen")
     object BookMarkScreen:Routes("bookMarkScreen")
-    object DetailScreen:Routes("detailsScreen")
+    object DetailsScreen:Routes("detailsScreen")
 
     /*Sub-navigation*/
 
     object AppStartNavigation:Routes("startApplicationSubNavigation")
-    object NewsNavigator:Routes("newsNavigator")
+    object NewsNavigatorScreen:Routes("newsNavigator")
     object NewsNavigation:Routes("newsNavigation")
 }

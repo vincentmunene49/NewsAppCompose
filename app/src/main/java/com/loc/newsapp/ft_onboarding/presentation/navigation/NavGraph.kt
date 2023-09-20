@@ -30,13 +30,12 @@ fun NavGraph(
             }
         }
 
-
         navigation(
-            startDestination = Routes.NewsNavigator.route,
+            startDestination = Routes.NewsNavigatorScreen.route,
             route = Routes.NewsNavigation.route
         ) {
-            composable(route = Routes.NewsNavigator.route) {
-                Text(text = "Hellp")
+            composable(route = Routes.NewsNavigatorScreen.route) {
+                Text(text = "Hello")
             }
         }
 
