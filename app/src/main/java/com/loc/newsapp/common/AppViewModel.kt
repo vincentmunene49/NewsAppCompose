@@ -16,7 +16,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AppViewModel @Inject constructor(
-    private val onBoardingStatus: OnBoardingStatus
+     onBoardingStatus: OnBoardingStatus
 ) : ViewModel() {
 
     var startingDestination by mutableStateOf(Routes.AppStartNavigation.route)
@@ -27,7 +27,7 @@ class AppViewModel @Inject constructor(
 
     init {
         onBoardingStatus.readOnBoardingStatus().onEach {
-            Log.d("READ","$it")
+
             startingDestination = if(it){
                 Routes.NewsNavigation.route
             }else{
