@@ -1,5 +1,6 @@
 package com.loc.newsapp.common
 
+import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -15,7 +16,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AppViewModel @Inject constructor(
-    private val onBoardingStatus: OnBoardingStatus
+     onBoardingStatus: OnBoardingStatus
 ) : ViewModel() {
 
     var startingDestination by mutableStateOf(Routes.AppStartNavigation.route)
@@ -26,6 +27,7 @@ class AppViewModel @Inject constructor(
 
     init {
         onBoardingStatus.readOnBoardingStatus().onEach {
+
             startingDestination = if(it){
                 Routes.NewsNavigation.route
             }else{
