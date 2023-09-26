@@ -1,4 +1,4 @@
-package com.loc.newsapp.application_main.ft_news_navigation.domain.model
+package com.loc.newsapp.ft_news_navigation.domain.model
 
 data class Article(
     val author: String,

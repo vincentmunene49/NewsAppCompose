@@ -1,4 +1,4 @@
-package com.loc.newsapp.application_main.ft_news_navigation.presentation.components
+package com.loc.newsapp.ft_news_navigation.presentation.components
 
 import android.content.res.Configuration
 import androidx.compose.foundation.clickable
@@ -30,8 +30,8 @@ import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.loc.newsapp.R
-import com.loc.newsapp.application_main.ft_news_navigation.domain.model.Article
-import com.loc.newsapp.application_main.ft_news_navigation.domain.model.Source
+import com.loc.newsapp.ft_news_navigation.domain.model.Article
+import com.loc.newsapp.ft_news_navigation.domain.model.Source
 import com.loc.newsapp.ui.LocalDimensions
 import com.loc.newsapp.ui.LocalPadding
 import com.loc.newsapp.ui.theme.NewsAppTheme
