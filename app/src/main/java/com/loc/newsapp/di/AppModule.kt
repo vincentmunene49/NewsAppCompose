@@ -1,11 +1,11 @@
 package com.loc.newsapp.di
 
 import android.app.Application
-import com.loc.newsapp.application_main.ft_news_navigation.data.remote.NewsApi
-import com.loc.newsapp.application_main.ft_news_navigation.data.repository.NewsRepositoryImpl
-import com.loc.newsapp.application_main.ft_news_navigation.domain.repository.NewsRepository
-import com.loc.newsapp.application_main.ft_news_navigation.domain.usecases.GetNewsUseCase
-import com.loc.newsapp.application_main.ft_news_navigation.domain.usecases.NewsUseCases
+import com.loc.newsapp.ft_news_navigation.data.remote.NewsApi
+import com.loc.newsapp.ft_news_navigation.data.repository.NewsRepositoryImpl
+import com.loc.newsapp.ft_news_navigation.domain.repository.NewsRepository
+import com.loc.newsapp.ft_news_navigation.domain.usecases.GetNewsUseCase
+import com.loc.newsapp.ft_news_navigation.domain.usecases.NewsUseCases
 import com.loc.newsapp.ft_onboarding.data.manager.LocalUserManagerImpl
 import com.loc.newsapp.ft_onboarding.domain.manager.LocalUserManager
 import com.loc.newsapp.ft_onboarding.domain.useCases.OnBoardingStatus
@@ -58,7 +58,7 @@ class AppModule {
 
     @Provides
     @Singleton
-    fun provideNewsUseCases(repository:NewsRepository): NewsUseCases {
+    fun provideNewsUseCases(repository: NewsRepository): NewsUseCases {
         return NewsUseCases(
             getNewsUseCase = GetNewsUseCase(repository)
         )

@@ -1,8 +1,8 @@
-package com.loc.newsapp.application_main.ft_news_navigation.data.remote
+package com.loc.newsapp.ft_news_navigation.data.remote
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.loc.newsapp.application_main.ft_news_navigation.domain.model.Article
+import com.loc.newsapp.ft_news_navigation.domain.model.Article
 import com.loc.newsapp.util.constants.TOKEN
 
 class NewsPagingSource(

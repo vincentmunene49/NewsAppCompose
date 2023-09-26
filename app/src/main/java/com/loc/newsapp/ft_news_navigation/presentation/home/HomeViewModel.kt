@@ -1,9 +1,9 @@
-package com.loc.newsapp.application_main.ft_news_navigation.presentation.home
+package com.loc.newsapp.ft_news_navigation.presentation.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
-import com.loc.newsapp.application_main.ft_news_navigation.domain.usecases.NewsUseCases
+import com.loc.newsapp.ft_news_navigation.domain.usecases.NewsUseCases
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
