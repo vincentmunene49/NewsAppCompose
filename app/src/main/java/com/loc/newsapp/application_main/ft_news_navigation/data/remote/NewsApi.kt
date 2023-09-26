@@ -7,7 +7,7 @@ import retrofit2.http.Header
 import retrofit2.http.Query
 
 interface NewsApi {
-    @GET(BASEURL)
+    @GET("everything")
 
     suspend fun getNews(
         @Header("Authorization") token: String,
