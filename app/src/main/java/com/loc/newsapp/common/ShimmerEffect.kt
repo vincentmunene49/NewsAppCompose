@@ -58,8 +58,10 @@ fun Modifier.shimmerEffect(): Modifier = composed {
 
 
 @Composable
-fun ArticleCardShimmerEffect() {
-    Row() {
+fun ArticleCardShimmerEffect(
+    modifier: Modifier = Modifier
+) {
+    Row(modifier = modifier) {
 
 
         Box(
@@ -76,11 +78,11 @@ fun ArticleCardShimmerEffect() {
         ) {
 
             Box(
-               modifier = Modifier
-                   .fillMaxWidth()
-                   .height(30.dp)
-                   .padding(LocalPadding.current.small)
-                   .shimmerEffect()
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(30.dp)
+                    .padding(LocalPadding.current.small)
+                    .shimmerEffect()
             )
 
             Row(

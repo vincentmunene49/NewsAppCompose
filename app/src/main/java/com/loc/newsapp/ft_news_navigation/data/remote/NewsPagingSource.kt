@@ -12,11 +12,12 @@ class NewsPagingSource(
     ) : PagingSource<Int, Article>() {
     private var totalResults = 0
     private val token = "Bearer $TOKEN"
+
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Article> {
         val page = params.key ?: 1
 
         return try {
-            val response = api.getNews(source = source, page = page, token = token)
+            val response = api.getNews(  sources = source, token = token)
             totalResults += response.articles.size
 
             val articles = response.articles.distinctBy { it.title }
