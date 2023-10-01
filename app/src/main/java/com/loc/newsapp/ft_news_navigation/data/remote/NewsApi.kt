@@ -13,4 +13,11 @@ interface NewsApi {
         @Header("Authorization") token:String,
         @Query("sources") sources: String
     ): NewsResponse
+
+    @GET("everything")
+    suspend fun searchNews(
+        @Header("Authorization") token:String,
+        @Query("q") searchQuery: String,
+        @Query("sources") sources: String,
+    ): NewsResponse
 }

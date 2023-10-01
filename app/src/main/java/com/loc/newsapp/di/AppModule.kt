@@ -6,6 +6,7 @@ import com.loc.newsapp.ft_news_navigation.data.repository.NewsRepositoryImpl
 import com.loc.newsapp.ft_news_navigation.domain.repository.NewsRepository
 import com.loc.newsapp.ft_news_navigation.domain.usecases.GetNewsUseCase
 import com.loc.newsapp.ft_news_navigation.domain.usecases.NewsUseCases
+import com.loc.newsapp.ft_news_navigation.domain.usecases.SearchNewsUseCase
 import com.loc.newsapp.ft_onboarding.data.manager.LocalUserManagerImpl
 import com.loc.newsapp.ft_onboarding.domain.manager.LocalUserManager
 import com.loc.newsapp.ft_onboarding.domain.useCases.OnBoardingStatus
@@ -60,7 +61,8 @@ class AppModule {
     @Singleton
     fun provideNewsUseCases(repository: NewsRepository): NewsUseCases {
         return NewsUseCases(
-            getNewsUseCase = GetNewsUseCase(repository)
+            getNewsUseCase = GetNewsUseCase(repository),
+            searchNewsUseCase = SearchNewsUseCase(repository)
         )
     }
 }
